@@ -1,0 +1,17 @@
+video{
+    height: 1060px;
+    margin-left: 10px;
+}
+
+#back{
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+	z-index: 2;
+}
+
+a{
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+}

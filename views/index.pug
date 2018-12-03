@@ -1,0 +1,38 @@
+extends layout
+
+block append scripts
+    script(src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(src='/javascripts/jcanvas.min.js')
+    script(src='/javascripts/common.js')
+    script(src='/javascripts/Log.js')
+    script(src='/javascripts/sound.js')
+    script(src='/javascripts/instruction.js')
+    script(src='/javascripts/drawing.js')
+    script(src='/javascripts/pallete.js')
+    script(src='/javascripts/save.js')
+
+block content
+    //-=============================
+        if (!user)
+            a(href="/login") Login
+            br
+            a(href="/register") Register
+          if (user)
+        - var userName = user.username
+        - var userPicArray = [user.picture1,user.picture2,user.picture3,user.picture4,user.picture5]
+        script(src='/javascripts/save.js',id="user", data-name=userName, data-pics=userPicArray)
+    .area
+        #wrap
+            canvas#canvas1
+            canvas#canvas2
+            canvas#canvas3
+        #gallery
+            h3 Gallery
+            #picture1
+            #picture2
+            #picture3
+            #picture4
+            #picture5
+
+

@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
+h3{
+    color: #111;
+    font-size: 1.143em;
+    font-weight: bold;
+    margin: 0 0 1.5em;
+    border-bottom: 2px solid #B92A2C;
+    box-shadow: 0 1px 0 #aaaaaa;
+    -webkit-box-shadow: 0 1px 0 #aaaaaa;
+    -moz-box-shadow: 0 1px 0 #aaaaaa;
+    text-shadow: #999999 0px 1px 1px;
+}
+
+h3{
+    font-size:3.0em;
+}
+a {
+  color: #00B7FF;
+}
+
+.area{
+    height :100%;
+    width :100%;
+}
+/*.area div{
+}*/
+#gallery {
+  display: inline-block;
+  vertical-align:top;
+  position: absolute;
+  background: #FFFC8A;
+  height: 100%;
+  width: 20%;
+}
+[id^="picture"] {
+  background: #FFFC8A;
+  position: absolute;
+  vertical-align: middle;
+  left : 0;
+  top : 0;
+  height : 15%;
+  width : 80%;
+  margin : 20px;
+  padding: 0px;
+}
+#wrap {
+  display: inline-block;
+  vertical-align:top;
+  height: 100%;
+  width: 80%;
+}
+/* canvas1 is for instruction*/
+#canvas1 {
+  background: #FFFC8A;
+  display: block;
+}
+/* canvas2 is for drawing*/
+#canvas2 {
+  background: #FFFFF0;
+  display: block;
+}
+/* canvas3 is for pallete*/
+#canvas3 {
+  background: #FFFC8A;
+  display: block;
+}

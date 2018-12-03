@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>IML Centivizer</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      body { background: #222; }
+#video_player { 
+  display: table; line-height: 0;
+  font-size: 0; background: #000;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#video_container { 
+  position: relative;
+}
+#video_player div, #video_player figcaption { 
+  display: table-cell;
+  vertical-align: top; 
+}
+#welcome { 
+  color: red; 
+  text-indent: 10px;
+}
+#video_container video { 
+  position: absolute; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#video_player figcaption { width: 25%; }
+#video_player figcaption a { display: block; }
+#video_player figcaption a { 
+  opacity: .5;
+  transition: 1s opacity; 
+}
+#video_player figcaption a img, figure video { 
+  width: 100%; height: auto; 
+}
+#video_player figcaption a.currentvid, #video_player figcaption a:hover, #video_player figcaption a:focus { opacity: 1; }
+@media (max-width: 700px) {
+  #video_player video, #video_player figcaption { 
+    display: table-row; 
+  }
+#video_container { padding-top: 56.25%; }
+#video_player figcaption a { 
+  display: inline-block; width: 33.33%; 
+}
+}
+
+    </style>
+
+        <script src='/javascripts/jqdoyekse.js'></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+ <h2 id="welcome">Anonymous User</h2>
+    <figure id="video_player">
+  <div id="video_container">
+  <video controls poster="/images/butterfly.png" autoplay>
+    <source src="/videos/butterfly.webm">
+  </video>
+
+</div>
+<figcaption>
+  <a href="/videos/butterfly.webm" class="currentvid">
+    <img src="/images/butterfly.png" alt="Butterfly">
+  </a>
+  <a href="/videos/nature.webm">
+    <img src="/images/nature.png" alt="Nature">
+  </a>
+  <a href="/videos/fish.webm">
+    <img src="/images/fish.png" alt="Fish">
+  </a>
+</figcaption>
+</figure>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="/javascripts/index.js"></script>
+
+    
+    <br class="featurette-divider">
+    <br class="featurette-divider">
+
+         <div class="row">
+
+         <div class="col-lg-3">
+          
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-6">
+
+        <div class="col-lg-2">
+          <img class="img-circle" src="/images/painting.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>  </h2>
+          <p><a class="btn btn-default text-center" href="/painting" role="button">  Identify User  </a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-2">
+          <img class="img-circle" src="/images/slot.jpg" width="140" height="140">
+          <h2>   </h2>
+          
+          <p><a class="btn btn-default" href="/slot" role="button">App1</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-2">
+          <img class="img-circle" src="/picture/whack/basicmole.png" width="140" height="140">
+          <h2>   </h2>
+          
+          <p><a class="btn btn-default" href="/whackm" role="button">App2</a></p>
+        </div>
+
+        <div class="col-lg-2">
+          <img class="img-circle" src="/picture/slider/slider.jpeg" width="140" height="140">
+          <h2>   </h2>
+          
+          <p><a class="btn btn-default" href="/slider" role="button">App3</a></p>
+        </div> 
+
+        <div class="col-lg-2">
+          <img class="img-circle" src="/picture/drum/drum.png" width="140" height="140">
+          <h2>   </h2>
+          
+          <p><a class="btn btn-default" href="/drum" role="button">App4</a></p>
+        </div>
+
+        <div class="col-lg-2">
+          <img class="img-circle" src="/picture/vr/venice.jpg" width="140" height="140">
+          <h2>   </h2>
+          
+          <p><a class="btn btn-default" href="/vr" role="button">App5</a></p>
+        </div>
+        
+        </div>
+
+      </div><!-- /.row -->
+    
+  </body>
+</html>
